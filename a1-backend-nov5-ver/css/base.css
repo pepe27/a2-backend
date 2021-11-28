@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+html {
+    background-image: url('../assets/image1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+h1 {
+    /* font-family: "Tangerine", serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    position: fixed;
+    top:0px;
+    width: 100%;
+    height: 180px;
+    background-color: thistle;
+    /* overflow: hidden; */
+}
+
+footer {
+    position: fixed;
+    bottom:0px;
+    width: 100%;
+    background-color: thistle;
+    height: 50px;
+    /* overflow: hidden; */
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: grey;
+    margin:1em;
+    padding: 10em 2em 2em;
+    /* width:90%; */
+    border: navy 2px solid;
+
+
+}
+
+#content {
+    padding-top: 1em;
+}
+
+section {
+    margin:0;
+    padding: 1em;
+    width:90%;
+    box-sizing:border-box;
+    border: tomato 1px solid;
+    /* border-width: 1em; */
+}
+
+#featured-article {
+    font-size: 24px;
+}
+
+h1, h2 {
+    font-size: 1.5em;
+    padding-left:30px;
+}
+
+article {
+    background-color: white;
+}
+
+#Technical .author {
+    background-color: black;
+    color: white;
+}
+
+#Career .author {
+    background-color: purple;
+    color: white;
+}

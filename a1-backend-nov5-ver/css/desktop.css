@@ -1,0 +1,52 @@
+#logo{
+    width: 100px;
+    transition: width 2s, height 2s, transform 2s;
+}
+#logo:hover{
+    transform: rotate(180deg);
+}
+header{
+    width: 100vw;
+}
+footer{
+    width: 100vw;
+}
+#featured-article{
+    width: 80vw;
+}
+
+section  {
+    display: flex;
+}
+
+/* For the top section */
+#featured {
+    flex-wrap:wrap;
+}
+
+#Industry, #Career, #Technical{
+    flex-direction: row;
+    flex-wrap:nowrap; 
+    /* ????? */
+}
+
+/* this is a new div, only for the 3 categories */
+#categories section{
+    flex-wrap:wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    width: min-content;
+}
+
+#categories section article{
+    flex-direction: column;
+    justify-content: baseline;
+
+}
+
+#categories{
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start;
+}
+
