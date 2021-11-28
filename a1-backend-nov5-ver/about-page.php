@@ -1,5 +1,6 @@
 <?php 
-//about-page.php?>
+//about-page.php
+include("includes/header.php");?>
 
 <?php
 //retrieve and display about page
@@ -24,3 +25,7 @@ while($row = $stmt->fetch()) {
 ?>
 
 <a href="login.php">Back to login</a>
+
+<?php 
+include("includes/footer.php");
+?>
