@@ -7,3 +7,12 @@ document.addEventListener('keydown', function(event) {
       alert('readingAssistance')
     }
   });
+
+/////////////////////
+
+let visitors = [
+    {
+        month: "Jan",
+        number: 111
+    },{},{}
+];

@@ -172,6 +172,43 @@ if ( $isAdmin == '1'){
     }
 
 } ?>
+
+<hr>
+<div id="visitors">
+        <h2>Site Vistors for Past 6 Months</h2>
+        <table>
+            <tr>
+                <th>Month</th>
+                <th>Number of Site Visitors</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>111</td>
+            </tr>
+            <tr>
+                <td>Febuary</td>
+                <td>222</td>
+            </tr>
+            <tr>
+                <td>March</td>
+                <td>333</td>
+            </tr>
+            <tr>
+                <td>April</td>
+                <td>444</td>
+            </tr>
+            <tr>
+                <td>May</td>
+                <td>555</td>
+            </tr>
+            <tr>
+                <td>June</td>
+                <td>666</td>
+            </tr>
+        </table>
+</div>
+
+
 <?php
 
 include("includes/footer.php");
