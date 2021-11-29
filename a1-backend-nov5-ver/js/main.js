@@ -82,7 +82,7 @@ for (let i=0; i<visitors.length; i++) {
 
 ////////////////////////////////////
 //GDPR
-let cookies = document.querySelector("#cookies");
+let cookies = document.querySelectorAll("#cookies")[0];
 let footer = document.querySelectorAll("footer p");
 //let pFooter = document.querySelectorAll("#pFooter")[0];
 
@@ -104,8 +104,8 @@ function acceptCookies (e) {
         e.target.innerHTML = "Revoke Cookies"
     }
     else {
-        footer[0].setAttribute("style","display:none");
-        footer[1].setAttribute("style","display:inline-block");
+        footer[0].setAttribute("style","display:inline-block");
+        footer[1].setAttribute("style","display:none");
         e.target.innerHTML = "Accept Cookies"
     }
 }
