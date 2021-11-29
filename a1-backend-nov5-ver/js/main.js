@@ -99,11 +99,13 @@ function readAssist(e) {
     //body.h1.setAttribute("style", "font-weight:bolder;");
 
     for (let i=0;i<p.length;i++) {
-    p[i].setAttribute("style", "font-weight:bolder;");
-    p[i].setAttribute("style", "font-size: larger;");
-    p[i].setAttribute("style", "letter-spacing: 2px;");
+    p[i].setAttribute("style", ["font-weight:bolder; line-height: 1.5em; font-size: larger;  letter-spacing: 2px;"]);
 
-    
+
+    // p[i].setAttribute("style", "font-size: larger;");
+    // p[i].setAttribute("style", "letter-spacing: 2px;");
+    // p[i].setAttribute("style", "line-height: 1.5em;");
+
 
     }
 
