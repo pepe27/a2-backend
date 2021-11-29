@@ -9,7 +9,7 @@ document.addEventListener('keydown', function(event) {
   });
 
 /////////////////////
-
+//Dynamic site visitor data
 let visitors = [
     {
         month: "Month",
@@ -36,7 +36,6 @@ let visitors = [
     
 ];
 
-//1.reference
 let table = document.querySelectorAll("#siteVisitors")[0];
 
 for (let i=0; i<visitors.length; i++) {
@@ -53,3 +52,12 @@ for (let i=0; i<visitors.length; i++) {
     table.appendChild(numberTh);
 
 }
+
+////////////////////////////////////
+//GDPR
+let cookies = document.querySelectorAll("#cookies")[0];
+let footer = document.querySelectorAll("footer")[0]
+
+cookies.setAttribute("style","color:red;");
+//footer.setAttribute("style","color:red;");
+footer.innerHTML = "Cookies were accepted. Would you like to revoke?" + "<a id='cookies' href='#'>Revoke Cookies</a>"; 
