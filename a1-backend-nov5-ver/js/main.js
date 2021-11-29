@@ -101,12 +101,21 @@ function readAssist(e) {
     for (let i=0;i<p.length;i++) {
     p[i].setAttribute("style", ["font-weight:bolder; line-height: 1.5em; font-size: larger;  letter-spacing: 2px;"]);
 
-
+    //Cannot set them individually, it will only take the last one. Checked with Developer Tools
     // p[i].setAttribute("style", "font-size: larger;");
     // p[i].setAttribute("style", "letter-spacing: 2px;");
     // p[i].setAttribute("style", "line-height: 1.5em;");
+    }
 
+    let a = document.querySelectorAll("a");
+    for (let i=0;i<p.length;i++) { 
+        a[i].setAttribute("style", ["font-size: larger; font-weight:bolder; background-color: yellow;"]);
+    }
 
+    let input = document.querySelectorAll("input");
+    for (let i=0;i<p.length;i++) { 
+        input[i].setAttribute("style", ["font-size: larger; font-weight:bolder;"]);
+    
     }
 
 }
