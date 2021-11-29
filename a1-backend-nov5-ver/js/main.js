@@ -1,41 +1,6 @@
 //main.js
 console.log("connected main.js");
 
-//readingAssistance
-// Consider background colours and font colors.
-// Add more padding around elements and increase the line height and letter spacing.
-
-
-let toggle = document.querySelectorAll("#toggle")[0];
-
-toggle.addEventListener("click",readAssist);
-
-function readAssist() {
-    console.log("readAssist function");
-    let form = document.querySelectorAll("form");
-
-    //section.setAttribute("style",backgroundColor="white");
-    //form.style.backgroundColor = "red";
-    form.setAttribute("style", "background-color: red;");
-    //document.getElementById("section").style.backgroundColor="white";
-
-    
-
-// This works for all css styles. However, hyphenated css properties like background-color will need to be converted to backgroundColor.
-// It's an easy to remember pattern: Remove the hyphen and camel-case the property name.
-}
-
-
-
-
-
-document.addEventListener('keydown', function(event) {
-    if (event.code == 'KeyA' && (event.ctrlKey || event.metaKey)) {
-      alert('readingAssistance')
-    }
-  });
-
-/////////////////////
 //Dynamic site visitor data
 let visitors = [
     {
@@ -110,15 +75,55 @@ function acceptCookies (e) {
     }
 }
 
+////////////////////////////////////////////////
+//readingAssistance
+// Consider background colours and font colors.
+// Add more padding around elements and increase the line height and letter spacing.
+
+
+let toggle = document.querySelectorAll("#toggle")[0];
+
+toggle.addEventListener("click",readAssist);
+
+function readAssist() {
+    console.log("readAssist function");
+    // document.style.color = "blue";
+
+    let form = document.querySelector("form");
+    form.setAttribute("style", "background-color: red;");
+
+
+    let body = document.querySelector("body");
+    body.setAttribute("style", "background-color: white;");
+    body.setAttribute("style", "background-color: white;");
+
+
+}
 
 
 
 
-//old thing that never worked
-// cookiesAccept.addEventListener("click",revertCookies); //not work
+    //section.setAttribute("style",backgroundColor="white");
+    //form.style.backgroundColor = "red";
+    //document.getElementById("section").style.backgroundColor="white";
 
-// function revertCookies(event){
-//     console.log("revertCookies Function");
+    
 
-// }
+    // This works for all css styles. However, hyphenated css properties like background-color will need to be converted to backgroundColor.
+    // It's an easy to remember pattern: Remove the hyphen and camel-case the property name.
 
+
+
+
+
+
+
+
+
+
+//Add a keyboard shortcut "Ctrl + A" that would toggle Reading Assistance on/off
+document.addEventListener('keydown', function(event) {
+    if (event.code == 'KeyA' && (event.ctrlKey || event.metaKey)) {
+      alert('readingAssistance')
+    }
+  });
