@@ -85,40 +85,34 @@ let toggle = document.querySelectorAll("#toggle")[0];
 
 toggle.addEventListener("click",readAssist);
 
-function readAssist() {
+function readAssist(e) {
     console.log("readAssist function");
-    // document.style.color = "blue";
 
-    let form = document.querySelector("form");
-    form.setAttribute("style", "background-color: red;");
-
+    let form = document.querySelectorAll("form");
+    for (let i=0;i<form.length;i++) {
+    form[i].setAttribute("style", "background-color: red;");
+    }
 
     let body = document.querySelector("body");
+    let p = document.querySelectorAll("p");
     body.setAttribute("style", "background-color: white;");
-    body.setAttribute("style", "background-color: white;");
+    //body.h1.setAttribute("style", "font-weight:bolder;");
 
-
-}
-
-
-
-
-    //section.setAttribute("style",backgroundColor="white");
-    //form.style.backgroundColor = "red";
-    //document.getElementById("section").style.backgroundColor="white";
+    for (let i=0;i<p.length;i++) {
+    p[i].setAttribute("style", "font-weight:bolder;");
+    p[i].setAttribute("style", "font-size: larger;");
+    p[i].setAttribute("style", "letter-spacing: 2px;");
 
     
 
-    // This works for all css styles. However, hyphenated css properties like background-color will need to be converted to backgroundColor.
-    // It's an easy to remember pattern: Remove the hyphen and camel-case the property name.
+    }
 
-
-
-
-
-
-
-
+}
+    //doens't work
+    // toggle.removeEventListener("dblclick",removeAssist);
+    // function removeAssist(e){
+    //     console.log("removeAssist function")
+    // }
 
 
 //Add a keyboard shortcut "Ctrl + A" that would toggle Reading Assistance on/off
