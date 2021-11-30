@@ -9,9 +9,9 @@ include("includes/header.php");
     <h1>Contact Form for IMMNews</h1>
 
     <p>Please fill out the form below!</p>
-    <form action="process-contact.php" method="POST">
-        <input type="text" name="name" placeholder="Spongebob" required>
-        <input type="email" name="email" placeholder="pineapple@thesea.com" required>
+    <form id="form" action="process-contactNEW.php" method="POST">
+        <input id="name" type="text" name="name" placeholder="Spongebob" required>
+        <input id="email" type="email" name="email" placeholder="pineapple@thesea.com" required>
         
         <p>Category interests:</p>
         <input type="checkbox" id="industry" name="industry" value="industry">
@@ -38,7 +38,7 @@ include("includes/header.php");
         <label for="contributor">Contributor</label>
         <input type="radio" id="administrator" name="role" value="administrator">
         <label for="administrator">Administrator</label>
-        <input type="submit" name="submit">
+        <input id="submit" type="submit" name="submit">
 
     </form>
 
