@@ -94,12 +94,11 @@ function readAssist(e) {
     }
 
     let body = document.querySelector("body");
-    let p = document.querySelectorAll("p");
-    body.setAttribute("style", "background-color: white;");
-    //body.h1.setAttribute("style", "font-weight:bolder;");
+    body.setAttribute("style", ["background-color: white;"]);
 
+    let p = document.querySelectorAll("p");
     for (let i=0;i<p.length;i++) {
-    p[i].setAttribute("style", ["font-weight:bolder; line-height: 1.5em; font-size: larger;  letter-spacing: 2px;"]);
+    p[i].setAttribute("style", ["font-weight:bolder; line-height: 1.5em; font-size: larger;  letter-spacing: 2px; padding: 1em 2em 1em;"]);
 
     //Cannot set them individually, it will only take the last one. Checked with Developer Tools
     // p[i].setAttribute("style", "font-size: larger;");

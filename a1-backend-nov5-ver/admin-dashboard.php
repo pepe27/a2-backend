@@ -10,7 +10,7 @@ $isAdmin = $_SESSION["isAdmin"];
 
 <h1>Articles Dashboard</h1>
 
-<button id="toggle">Reading Assistance</button>
+<!-- <button id="toggle">Reading Assistance</button> -->
 
 <?php
 //showing Add New Article Functionality for Admin User

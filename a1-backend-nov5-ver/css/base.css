@@ -21,12 +21,22 @@ header {
     /* overflow: hidden; */
 }
 
+header ul {
+    display: flex;
+}
+
+header ul li{
+    display: flex;
+}
+
+
+
 footer {
     position: fixed;
     bottom:0px;
     width: 100%;
     background-color: thistle;
-    height: 100px;
+    height: 50px;
     /* overflow: hidden; */
 }
 
@@ -35,7 +45,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: grey;
     margin:1em;
-    padding: 10em 2em 2em;
+    padding: 15em 2em 10em;
+    /* padding-top: 70px; 
+    padding-bottom: 70px; */
     /* width:90%; */
     border: navy 2px solid;
 
