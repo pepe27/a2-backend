@@ -82,13 +82,57 @@ function acceptCookies (e) {
 
 
 let toggle = document.querySelectorAll("#toggle")[0];
+let body = document.querySelector("body");
+let p = document.querySelectorAll("p");
+let a = document.querySelectorAll("a");
+let form = document.querySelectorAll("form");
+let input = document.querySelectorAll("input");
 
 toggle.addEventListener("click",readAssist);
 
+let flag =true;
+function readAssist(e) {
+    if (flag) {
+        body.classList.add('high-contrast-body');
+        for (let i=0;i<p.length;i++) {
+            p[i].classList.add('high-contrast-p');
+        }
+        for (let i=0;i<a.length;i++) {
+            a[i].classList.add('high-contrast-p');
+        }
+        for (let i=0;i<form.length;i++) {
+            form[i].classList.add('high-contrast-p');
+        }
+        for (let i=0;i<input.length;i++) {
+            input[i].classList.add('high-contrast-p');
+        }
+    } else {
+        body.classList.remove('high-contrast-body');
+        for (let i=0;i<p.length;i++) {
+            p[i].classList.remove('high-contrast-p');
+        }
+        for (let i=0;i<a.length;i++) {
+            a[i].classList.remove('high-contrast-p');
+        }
+        for (let i=0;i<form.length;i++) {
+            form[i].classList.remove('high-contrast-p');
+        }
+        for (let i=0;i<input.length;i++) {
+            input[i].classList.remove('high-contrast-p');
+        }
+
+
+    }
+    flag = !flag; //this is important. flag == false, once the function runs
+}
+
+/*
+//my version
+// let count = 0;
 function readAssist(e) {
     //console.log("readAssist function");
-    let count = e++;
-    console.log(count);
+    // count++;
+    // console.log(count);
 
     let form = document.querySelectorAll("form");
     for (let i=0;i<form.length;i++) {
@@ -120,20 +164,41 @@ function readAssist(e) {
     }
 
 }
-    //doens't work
-    // toggle.removeEventListener("dblclick",removeAssist);
-    // function removeAssist(e){
-    //     console.log("removeAssist function")
-    // }
-
+*/
 
 //Add a keyboard shortcut "Ctrl + A" that would toggle Reading Assistance on/off
+
 document.addEventListener('keydown', function(event) {
     if (event.code == 'KeyA' && (event.ctrlKey || event.metaKey)) {
+        console.log("undo");
+    
         event.preventDefault(); //?
-        console.log('readingAssistance');
-
         readAssist(event);
+        
+        
+      
 
     }
   });
+
+//my old version, only toggles on, no off
+/*
+document.addEventListener('keydown', function(event) {
+    if (event.code == 'KeyA' && (event.ctrlKey || event.metaKey)) {
+        console.log('readingAssistance');
+
+        if (count == 0) {
+            event.preventDefault(); //?
+            readAssist(event);
+        } 
+        else {
+            console.log("undo");
+            //readAssist.remove(); //not work
+            //event.target.remove(); //this removes everything...
+           
+
+        }
+
+    }
+  });
+*/

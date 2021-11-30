@@ -83,3 +83,26 @@ article {
     background-color: purple;
     color: white;
 }
+
+.high-contrast-body{
+    background-color: white; 
+    padding: 20em 2em 10em;
+}
+
+.high-contrast-p{
+    font-weight:bolder; 
+    line-height: 1.5em; 
+    font-size: larger;  
+    letter-spacing: 2px; 
+    padding: 1em 2em 1em;
+}
+
+.high-contrast-a{
+    font-size: larger; font-weight:bolder; background-color: yellow;
+}
+.high-contrast-form{
+    background-color: red;
+}
+.high-contrast-input{
+    font-size: larger; font-weight:bolder;
+}
