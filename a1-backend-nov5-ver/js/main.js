@@ -202,3 +202,6 @@ document.addEventListener('keydown', function(event) {
     }
   });
 */
+
+////////////////////////////////////////////////
+//Convert the contact page to use AJAX.
