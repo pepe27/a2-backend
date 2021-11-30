@@ -46,16 +46,10 @@ body {
     background-color: grey;
     margin:1em;
     padding: 15em 2em 10em;
-    /* padding-top: 70px; 
-    padding-bottom: 70px; */
     /* width:90%; */
     border: navy 2px solid;
 
 
-}
-
-#content {
-    padding-top: 1em;
 }
 
 section {

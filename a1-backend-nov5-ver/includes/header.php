@@ -19,7 +19,7 @@
     <!-- <link rel="stylesheet" href="css/mobile.css"> -->
     <!-- <link rel="stylesheet" href="css/desktop.css"> -->
 </head>
-<body>
+<body  style = "padding: 15em 2em 10em;">
     <header>
         <img src="assets/logo.jpg" alt="immnews logo">
         <nav>

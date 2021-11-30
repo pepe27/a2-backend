@@ -10,6 +10,7 @@ $isAdmin = $_SESSION["isAdmin"];
 
 <h1>Articles Dashboard</h1>
 
+<!-- It's in the footer.php now -->
 <!-- <button id="toggle">Reading Assistance</button> -->
 
 <?php

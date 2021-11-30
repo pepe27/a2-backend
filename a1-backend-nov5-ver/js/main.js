@@ -94,7 +94,7 @@ function readAssist(e) {
     }
 
     let body = document.querySelector("body");
-    body.setAttribute("style", ["background-color: white;"]);
+    body.setAttribute("style", ["background-color: white; padding: 20em 2em 10em;"]);
 
     let p = document.querySelectorAll("p");
     for (let i=0;i<p.length;i++) {
