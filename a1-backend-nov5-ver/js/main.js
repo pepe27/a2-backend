@@ -86,7 +86,9 @@ let toggle = document.querySelectorAll("#toggle")[0];
 toggle.addEventListener("click",readAssist);
 
 function readAssist(e) {
-    console.log("readAssist function");
+    //console.log("readAssist function");
+    let count = e++;
+    console.log(count);
 
     let form = document.querySelectorAll("form");
     for (let i=0;i<form.length;i++) {
@@ -128,6 +130,10 @@ function readAssist(e) {
 //Add a keyboard shortcut "Ctrl + A" that would toggle Reading Assistance on/off
 document.addEventListener('keydown', function(event) {
     if (event.code == 'KeyA' && (event.ctrlKey || event.metaKey)) {
-      alert('readingAssistance')
+        event.preventDefault(); //?
+        console.log('readingAssistance');
+
+        readAssist(event);
+
     }
   });
