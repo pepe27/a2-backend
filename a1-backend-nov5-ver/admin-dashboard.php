@@ -182,7 +182,7 @@ if ( $isAdmin == '1'){
         <table id="siteVisitors">
         </table>
 </div>
-
+<script src="js/main.js"></script>
 
 <?php
 

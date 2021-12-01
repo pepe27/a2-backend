@@ -1,23 +1,6 @@
 //contact-ajax.js
 console.log("contact-ajax.js connected");
 
-// //from main-ajax.js
-// var xhr = new XMLHttpRequest(); 
-// xhr.onreadystatechange = function(e){     
-// 	console.log(xhr.readyState);     
-// 	if(xhr.readyState === 4){        
-// 		console.log(xhr.responseText);// modify or populate html elements based on response.
-// 	        //DOM Manipulation
-// 	        var response = JSON.parse(xhr.responseText);
-// 	        console.log(response);
-
-//        } 
-// };
-
-// xhr.open("POST","process-contactNEW.php",true); 
-// xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-// xhr.send("fname=Henry&lname=Ford"); // Form data should be sent in a format that the server can parse, like a query string:
-
 /////////////////////////////////////////
 //formStatus ajaxForm name email industry technical career role
 let formStatus = document.querySelectorAll("#formStatus")[0];
@@ -59,7 +42,8 @@ function doSomething(e){
 
 	xhr.open("POST","process-contactNEW.php",true); 
 	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-	xhr.send("name1=" + name1.value +"&email=" + email.value +"&role=" + role.value ); // Form data should be sent in a format that the server can parse, like a query string:
+	xhr.send(`name1=${name1.value}&email=${email.value}&role=${role.value}&industry=${industry.value}&technical=${technical.value}&career=${career.value}`); // Form data should be sent in a format that the server can parse, like a query string
+	//VSC changed this to a Template String
 
 	//myForm.setAttribute("style","display:none");
 	//message.innerHTML = "Thank you for your submission!"

@@ -6,14 +6,11 @@
 //receive variables 
 $name1 = $_POST["name1"]; 
 $email = $_POST["email"];
-// $industry = $_POST["industry"]; 
-// $technical = $_POST["technical"];
-// $career = $_POST["career"]; 
+$industry = $_POST["industry"]; 
+$technical = $_POST["technical"];
+$career = $_POST["career"]; 
 
 $role = $_POST["role"]; //can have value of write, admin, contributor
-
-
-
 
 //insert data into the database table
 
@@ -38,5 +35,5 @@ if($stmt->execute() == true){
 }else{
 	echo('{"success":"false"}');
 }
-//insert doesn't need todisplay data
+//insert doesn't need to display data, it just needs to echo
 ?>
