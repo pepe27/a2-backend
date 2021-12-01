@@ -19,7 +19,7 @@ console.log("contact-ajax.js connected");
 // xhr.send("fname=Henry&lname=Ford"); // Form data should be sent in a format that the server can parse, like a query string:
 
 /////////////////////////////////////////
-//formStatus ajaxForm name email industry technical career
+//formStatus ajaxForm name email industry technical career role
 let formStatus = document.querySelectorAll("#formStatus")[0];
 let ajaxForm = document.querySelectorAll("#ajaxForm")[0];
 let name1 = document.querySelectorAll("#name1")[0];
@@ -28,12 +28,16 @@ let industry = document.querySelectorAll("#industry")[0];
 let technical = document.querySelectorAll("#technical")[0];
 let career = document.querySelectorAll("#career")[0];
 
+
 //the event is on the FORM, not the SUBMIT Button 
 ajaxForm.addEventListener("submit",doSomething);
 
 //to stop a form from submiting, use event.preventDefault();
 
 function doSomething(e){
+	let role = document.querySelectorAll("[name=role]:checked")[0];
+	//get elemeent that has name=role that is checked
+
 	console.log("doSomething Fn");
 	e.preventDefault();
 	
@@ -55,7 +59,7 @@ function doSomething(e){
 
 	xhr.open("POST","process-contactNEW.php",true); 
 	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-	xhr.send("email=" + email.value); // Form data should be sent in a format that the server can parse, like a query string:
+	xhr.send("name1=" + name1.value +"&email=" + email.value +"&role=" + role.value ); // Form data should be sent in a format that the server can parse, like a query string:
 
 	//myForm.setAttribute("style","display:none");
 	//message.innerHTML = "Thank you for your submission!"

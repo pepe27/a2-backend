@@ -42,6 +42,7 @@ include("includes/header.php");
         <input id="submit" type="submit" name="submit">
 
     </form>
+    <script src="js/contact-ajax.js"></script>
 
 
 <?php

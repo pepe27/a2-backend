@@ -11,7 +11,6 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script src="js/contact-ajax.js"></script>
 </body>
 </html>
 

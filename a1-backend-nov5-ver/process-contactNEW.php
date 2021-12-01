@@ -6,13 +6,11 @@
 //receive variables 
 $name1 = $_POST["name1"]; 
 $email = $_POST["email"];
-$industry = $_POST["industry"]; 
-$technical = $_POST["technical"];
-$career = $_POST["career"]; 
-$writer = $_POST["writer"];
-$contributor = $_POST["contributor"]; 
-$administrator = $_POST["administrator"];
-$role = $_POST["role"]; 
+// $industry = $_POST["industry"]; 
+// $technical = $_POST["technical"];
+// $career = $_POST["career"]; 
+
+$role = $_POST["role"]; //can have value of write, admin, contributor
 
 
 
@@ -28,27 +26,17 @@ include("includes/db-connect.php");
 if (!$industry) $industry =""; else $industry ="1";
 if (!$technical) $technical =""; else $technical ="1";
 if (!$career) $career =""; else $career ="1";
-if (!$writer) $writer =""; else $writer ="1";
-if (!$contributor) $contributor =""; else $contributor ="1";
-if (!$administrator) $administrator =""; else $administrator ="1";
-
-if ($role = "contributor") $contributor ="1"; 
-else if ($role = "administrator") $administrator ="1"; 
-else if ($role = "writer") $writer ="1"; 
-else {}
 
 
-$stmt = $pdo->prepare("INSERT INTO `immnews-contactpage` (`personId`, `name`, `email`, `industry`, `technical`, `career`, `writer`, `contributor`, `administrator`) VALUES (NULL, '$name', '$email', '$industry', '$technical', '$career', '$writer', '$contributor', '$administrator');");
+
+$stmt = $pdo->prepare("INSERT INTO `immnews-contactpage` (`personId`, `name`, `email`, `industry`, `technical`, `career`, `role`) VALUES (NULL, '$name1', '$email', '$industry', '$technical', '$career', '$role');");
 //$stmt = $pdo->prepare("INSERT INTO `immnews-contactpage` (`personId`, `name`, `email`, `industry`, `technical`, `career`) VALUES (NULL, '$name', '$email', '$industry', '$technical', '$career');");
 
 //execute
-$stmt->execute();
-
-//display results (NEW STUFF)
-
-$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$json = json_encode($results);
-
-echo($json);
-
+if($stmt->execute() == true){
+	echo('{"success":"true"}');
+}else{
+	echo('{"success":"false"}');
+}
+//insert doesn't need todisplay data
 ?>
