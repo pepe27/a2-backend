@@ -14,10 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/jpg" href="assets/logo.jpg"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/form.css">
-    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
-    <!-- <link rel="stylesheet" href="css/desktop.css"> -->
+    <link rel="stylesheet" media="screen" href="css/form.css">
+    <link rel="stylesheet" media="screen" href="css/base.css">
+    <link rel="stylesheet" media="screen and (max-width:480px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width:480px)" href="css/desktop.css">
+
 </head>
 <body>
 <!-- style = "padding: 15em 2em 10em;"     -->

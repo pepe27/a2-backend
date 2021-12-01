@@ -22,6 +22,7 @@ console.log("contact-ajax.js connected");
 let submit = document.querySelectorAll("#submit")[0];
 let myForm = document.querySelectorAll("#form")[0];
 let message = document.querySelectorAll("#message")[0];
+let data = new FormData();
 
 submit.addEventListener("submit",doSomething);
 
@@ -47,7 +48,7 @@ function doSomething(e){
 
 	xhr.open("POST","process-contactNEW.php",true); 
 	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-	xhr.send("fname=Henry&lname=Ford"); // Form data should be sent in a format that the server can parse, like a query string:
+	xhr.send(data); // Form data should be sent in a format that the server can parse, like a query string:
 
 	myForm.setAttribute("style","display:none");
 	message.innerHTML = "Thank you for your submission!"
@@ -55,4 +56,5 @@ function doSomething(e){
 
 }
 
-
+//name=STUDY+%2B+ASSIGNMENT&email=mimixuan27%40gmail.com&career=career&role=writer&submit=Submit
+//name=pepepe&email=pepepep7%40gmail.com&industry=industry&technical=technical&career=career&role=writer&submit=Submit

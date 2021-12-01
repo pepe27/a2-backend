@@ -36,8 +36,8 @@ else if ($role = "writer") $writer ="1";
 else {}
 
 
-//$stmt = $pdo->prepare("SELECT * FROM `immnews-contactpage`");
 $stmt = $pdo->prepare("INSERT INTO `immnews-contactpage` (`personId`, `name`, `email`, `industry`, `technical`, `career`, `writer`, `contributor`, `administrator`) VALUES (NULL, '$name', '$email', '$industry', '$technical', '$career', '$writer', '$contributor', '$administrator');");
+//$stmt = $pdo->prepare("INSERT INTO `immnews-contactpage` (`personId`, `name`, `email`, `industry`, `technical`, `career`) VALUES (NULL, '$name', '$email', '$industry', '$technical', '$career');");
 
 //execute
 $stmt->execute();
