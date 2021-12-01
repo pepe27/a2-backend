@@ -31,13 +31,13 @@ include("includes/header.php");
         <label for="administrator">Administrator</label>
         <input type="submit" name="submit"> -->
 
-        <p>Your Role:</p>
+        <!-- <p>Your Role:</p>
         <input type="radio" id="writer" name="role" value="writer">
         <label for="writer">Writer</label>
         <input type="radio" id="contributor" name="role" value="contributor">
         <label for="contributor">Contributor</label>
         <input type="radio" id="administrator" name="role" value="administrator">
-        <label for="administrator">Administrator</label>
+        <label for="administrator">Administrator</label> -->
         <input id="submit" type="submit" name="submit">
 
     </form>
