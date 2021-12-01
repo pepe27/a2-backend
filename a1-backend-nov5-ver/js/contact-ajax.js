@@ -19,14 +19,18 @@ console.log("contact-ajax.js connected");
 // xhr.send("fname=Henry&lname=Ford"); // Form data should be sent in a format that the server can parse, like a query string:
 
 /////////////////////////////////////////
-let submit = document.querySelectorAll("#submit")[0];
-let myForm = document.querySelectorAll("#form")[0];
-let message = document.querySelectorAll("#message")[0];
-let data = new FormData();
+//formStatus ajaxForm name email industry technical career
+let formStatus = document.querySelectorAll("#formStatus")[0];
+let ajaxForm = document.querySelectorAll("#ajaxForm")[0];
+let name1 = document.querySelectorAll("#name1")[0];
+let email = document.querySelectorAll("#email")[0];
+let industry = document.querySelectorAll("#industry")[0];
+let technical = document.querySelectorAll("#technical")[0];
+let career = document.querySelectorAll("#career")[0];
 
-submit.addEventListener("submit",doSomething);
+//the event is on the FORM, not the SUBMIT Button 
+ajaxForm.addEventListener("submit",doSomething);
 
-//NOTE:the submit button is not a click event, it is the submit event on the form
 //to stop a form from submiting, use event.preventDefault();
 
 function doSomething(e){
@@ -39,19 +43,22 @@ function doSomething(e){
 		console.log(xhr.readyState);     
 		if(xhr.readyState === 4){        
 			console.log(xhr.responseText);// modify or populate html elements based on response.
-				//DOM Manipulation
-				var response = JSON.parse(xhr.responseText);
-				console.log(response);
-
+			//receive {"success":"true"} from PHP file
+            var response = JSON.parse(xhr.responseText);  
+			//DOM Manipulation
+			if(response.success) {
+                formStatus.innerHTML = "Thanks for submitting your form";
+                ajaxForm.remove(); //can do as well
+            }
 		} 
 	};
 
 	xhr.open("POST","process-contactNEW.php",true); 
 	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-	xhr.send(data); // Form data should be sent in a format that the server can parse, like a query string:
+	xhr.send("email=" + email.value); // Form data should be sent in a format that the server can parse, like a query string:
 
-	myForm.setAttribute("style","display:none");
-	message.innerHTML = "Thank you for your submission!"
+	//myForm.setAttribute("style","display:none");
+	//message.innerHTML = "Thank you for your submission!"
 
 
 }

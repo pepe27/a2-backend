@@ -4,7 +4,7 @@
 
 <?php
 //receive variables 
-$name = $_POST["name"]; 
+$name1 = $_POST["name1"]; 
 $email = $_POST["email"];
 $industry = $_POST["industry"]; 
 $technical = $_POST["technical"];
@@ -13,6 +13,8 @@ $writer = $_POST["writer"];
 $contributor = $_POST["contributor"]; 
 $administrator = $_POST["administrator"];
 $role = $_POST["role"]; 
+
+
 
 
 //insert data into the database table
