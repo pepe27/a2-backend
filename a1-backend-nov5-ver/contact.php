@@ -8,7 +8,7 @@ include("includes/header.php");
 <title>Contact Form</title>
     <h1>Contact Form for IMMNews</h1>
 
-    <p>Please fill out the form below!</p>
+    <p id="message">Please fill out the form below!</p>
     <form id="form" action="process-contactNEW.php" method="POST">
         <input id="name" type="text" name="name" placeholder="Spongebob" required>
         <input id="email" type="email" name="email" placeholder="pineapple@thesea.com" required>
