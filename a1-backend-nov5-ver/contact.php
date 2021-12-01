@@ -7,10 +7,11 @@ include("includes/header.php");
 
 <title>Contact Form</title>
     <h1>Contact Form for IMMNews</h1>
+    <section id="formStatus"> </section> 
 
     <p id="message">Please fill out the form below!</p>
-    <form id="form" action="process-contactNEW.php" method="POST">
-        <input id="name" type="text" name="name" placeholder="Spongebob" required>
+    <form id="ajaxForm" action="process-contactNEW.php" method="POST">
+        <input id="name1" type="text" name="name1" placeholder="Spongebob" required>
         <input id="email" type="email" name="email" placeholder="pineapple@thesea.com" required>
         
         <p>Category interests:</p>
