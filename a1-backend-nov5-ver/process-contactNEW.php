@@ -17,9 +17,10 @@ $role = $_POST["role"]; //can have value of write, admin, contributor
 //connect
 include("includes/db-connect.php"); 
 
-//NOTE: THIS IS NOT SENDING IT YET, THOUGH!!!!!!!!!
+//Note Unresolved: The value for industry,technical,career is always 1 in phpmyadmin
 //prepare
 
+//if change $industry ="0", then will always be 0 in phpmyadmin table
 if (!$industry) $industry =""; else $industry ="1";
 if (!$technical) $technical =""; else $technical ="1";
 if (!$career) $career =""; else $career ="1";

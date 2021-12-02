@@ -43,7 +43,7 @@ function doSomething(e){
 	xhr.open("POST","process-contactNEW.php",true); 
 	xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
 	xhr.send(`name1=${name1.value}&email=${email.value}&role=${role.value}&industry=${industry.value}&technical=${technical.value}&career=${career.value}`); // Form data should be sent in a format that the server can parse, like a query string
-	//VSC changed this to a Template String
+	//VSC changed this to a Template String, had the lightbulb icon show up
 
 	//myForm.setAttribute("style","display:none");
 	//message.innerHTML = "Thank you for your submission!"

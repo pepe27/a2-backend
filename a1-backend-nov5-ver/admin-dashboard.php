@@ -182,7 +182,8 @@ if ( $isAdmin == '1'){
         <table id="siteVisitors">
         </table>
 </div>
-<script src="js/main.js"></script>
+<!-- <script src="js/main.js"></script> --> 
+<!-- can't put the script here, it breaks. has to be in the footer -->
 
 <?php
 
